@@ -1,13 +1,14 @@
-#include "kazu.hpp"
+#include "ui_mainWindow.h"
 #include <QApplication>
-#include <QPushButton>
-#include <QtMultimedia>
 
 int main(int argc, char **argv) {
 	QApplication app(argc, argv);
+	QMainWindow mainWindow;
+	Ui_kazuWindow kazuWindow;
 
-	QPushButton button("Hello World!");
-	button.show();
+	kazuWindow.setupUi(&mainWindow);
+
+	mainWindow.show();
 
 	return app.exec();
 }

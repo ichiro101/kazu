@@ -12,9 +12,13 @@
     <ClInclude Include="kazu.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ui_mainWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="CMakeLists.txt" />
+    <CustomBuild Include="mainWindow.ui" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
