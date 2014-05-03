@@ -84,7 +84,7 @@
     </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>F:\Dev\Projects\kazu\src;F:\Dev\Qt\5.2.1\msvc2012\include;F:\Dev\Qt\5.2.1\msvc2012\include\QtWidgets;F:\Dev\Qt\5.2.1\msvc2012\include\QtGui;F:\Dev\Qt\5.2.1\msvc2012\include\QtANGLE;F:\Dev\Qt\5.2.1\msvc2012\include\QtCore;F:\Dev\Qt\5.2.1\msvc2012\mkspecs\win32-msvc2012;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>F:\Dev\Projects\kazu\src;F:\Dev\Qt\5.2.1\msvc2012\include;F:\Dev\Qt\5.2.1\msvc2012\include\QtWidgets;F:\Dev\Qt\5.2.1\msvc2012\include\QtGui;F:\Dev\Qt\5.2.1\msvc2012\include\QtANGLE;F:\Dev\Qt\5.2.1\msvc2012\include\QtCore;F:\Dev\Qt\5.2.1\msvc2012\mkspecs\win32-msvc2012;F:\Dev\Qt\5.2.1\msvc2012\include\QtMultimedia;F:\Dev\Qt\5.2.1\msvc2012\include\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsCpp</CompileAs>
@@ -96,15 +96,15 @@
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_MULTIMEDIA_LIB;QT_NETWORK_LIB;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>F:\Dev\Projects\kazu\src;F:\Dev\Qt\5.2.1\msvc2012\include;F:\Dev\Qt\5.2.1\msvc2012\include\QtWidgets;F:\Dev\Qt\5.2.1\msvc2012\include\QtGui;F:\Dev\Qt\5.2.1\msvc2012\include\QtANGLE;F:\Dev\Qt\5.2.1\msvc2012\include\QtCore;F:\Dev\Qt\5.2.1\msvc2012\mkspecs\win32-msvc2012;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_MULTIMEDIA_LIB;QT_NETWORK_LIB;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:\Dev\Projects\kazu\src;F:\Dev\Qt\5.2.1\msvc2012\include;F:\Dev\Qt\5.2.1\msvc2012\include\QtWidgets;F:\Dev\Qt\5.2.1\msvc2012\include\QtGui;F:\Dev\Qt\5.2.1\msvc2012\include\QtANGLE;F:\Dev\Qt\5.2.1\msvc2012\include\QtCore;F:\Dev\Qt\5.2.1\msvc2012\mkspecs\win32-msvc2012;F:\Dev\Qt\5.2.1\msvc2012\include\QtMultimedia;F:\Dev\Qt\5.2.1\msvc2012\include\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>F:\Dev\Projects\kazu\src;F:\Dev\Qt\5.2.1\msvc2012\include;F:\Dev\Qt\5.2.1\msvc2012\include\QtWidgets;F:\Dev\Qt\5.2.1\msvc2012\include\QtGui;F:\Dev\Qt\5.2.1\msvc2012\include\QtANGLE;F:\Dev\Qt\5.2.1\msvc2012\include\QtCore;F:\Dev\Qt\5.2.1\msvc2012\mkspecs\win32-msvc2012;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>F:\Dev\Projects\kazu\src;F:\Dev\Qt\5.2.1\msvc2012\include;F:\Dev\Qt\5.2.1\msvc2012\include\QtWidgets;F:\Dev\Qt\5.2.1\msvc2012\include\QtGui;F:\Dev\Qt\5.2.1\msvc2012\include\QtANGLE;F:\Dev\Qt\5.2.1\msvc2012\include\QtCore;F:\Dev\Qt\5.2.1\msvc2012\mkspecs\win32-msvc2012;F:\Dev\Qt\5.2.1\msvc2012\include\QtMultimedia;F:\Dev\Qt\5.2.1\msvc2012\include\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -129,7 +129,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </PreBuildEvent>
     <Link>
       <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;F:\Dev\Qt\5.2.1\msvc2012\lib\Qt5Widgetsd.lib;F:\Dev\Qt\5.2.1\msvc2012\lib\Qt5Guid.lib;F:\Dev\Qt\5.2.1\msvc2012\lib\Qt5Cored.lib</AdditionalDependencies>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;F:\Dev\Qt\5.2.1\msvc2012\lib\Qt5Widgetsd.lib;F:\Dev\Qt\5.2.1\msvc2012\lib\Qt5Multimediad.lib;F:\Dev\Qt\5.2.1\msvc2012\lib\Qt5Guid.lib;F:\Dev\Qt\5.2.1\msvc2012\lib\Qt5Networkd.lib;F:\Dev\Qt\5.2.1\msvc2012\lib\Qt5Cored.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ImportLibrary>F:/Dev/Projects/kazu/src/Debug/kazu.lib</ImportLibrary>
@@ -143,7 +143,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>F:\Dev\Projects\kazu\src;F:\Dev\Qt\5.2.1\msvc2012\include;F:\Dev\Qt\5.2.1\msvc2012\include\QtWidgets;F:\Dev\Qt\5.2.1\msvc2012\include\QtGui;F:\Dev\Qt\5.2.1\msvc2012\include\QtANGLE;F:\Dev\Qt\5.2.1\msvc2012\include\QtCore;F:\Dev\Qt\5.2.1\msvc2012\mkspecs\win32-msvc2012;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>F:\Dev\Projects\kazu\src;F:\Dev\Qt\5.2.1\msvc2012\include;F:\Dev\Qt\5.2.1\msvc2012\include\QtWidgets;F:\Dev\Qt\5.2.1\msvc2012\include\QtGui;F:\Dev\Qt\5.2.1\msvc2012\include\QtANGLE;F:\Dev\Qt\5.2.1\msvc2012\include\QtCore;F:\Dev\Qt\5.2.1\msvc2012\mkspecs\win32-msvc2012;F:\Dev\Qt\5.2.1\msvc2012\include\QtMultimedia;F:\Dev\Qt\5.2.1\msvc2012\include\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -154,15 +154,15 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat></DebugInformationFormat>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;QT_MULTIMEDIA_LIB;QT_NETWORK_LIB;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>F:\Dev\Projects\kazu\src;F:\Dev\Qt\5.2.1\msvc2012\include;F:\Dev\Qt\5.2.1\msvc2012\include\QtWidgets;F:\Dev\Qt\5.2.1\msvc2012\include\QtGui;F:\Dev\Qt\5.2.1\msvc2012\include\QtANGLE;F:\Dev\Qt\5.2.1\msvc2012\include\QtCore;F:\Dev\Qt\5.2.1\msvc2012\mkspecs\win32-msvc2012;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;QT_MULTIMEDIA_LIB;QT_NETWORK_LIB;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:\Dev\Projects\kazu\src;F:\Dev\Qt\5.2.1\msvc2012\include;F:\Dev\Qt\5.2.1\msvc2012\include\QtWidgets;F:\Dev\Qt\5.2.1\msvc2012\include\QtGui;F:\Dev\Qt\5.2.1\msvc2012\include\QtANGLE;F:\Dev\Qt\5.2.1\msvc2012\include\QtCore;F:\Dev\Qt\5.2.1\msvc2012\mkspecs\win32-msvc2012;F:\Dev\Qt\5.2.1\msvc2012\include\QtMultimedia;F:\Dev\Qt\5.2.1\msvc2012\include\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>F:\Dev\Projects\kazu\src;F:\Dev\Qt\5.2.1\msvc2012\include;F:\Dev\Qt\5.2.1\msvc2012\include\QtWidgets;F:\Dev\Qt\5.2.1\msvc2012\include\QtGui;F:\Dev\Qt\5.2.1\msvc2012\include\QtANGLE;F:\Dev\Qt\5.2.1\msvc2012\include\QtCore;F:\Dev\Qt\5.2.1\msvc2012\mkspecs\win32-msvc2012;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>F:\Dev\Projects\kazu\src;F:\Dev\Qt\5.2.1\msvc2012\include;F:\Dev\Qt\5.2.1\msvc2012\include\QtWidgets;F:\Dev\Qt\5.2.1\msvc2012\include\QtGui;F:\Dev\Qt\5.2.1\msvc2012\include\QtANGLE;F:\Dev\Qt\5.2.1\msvc2012\include\QtCore;F:\Dev\Qt\5.2.1\msvc2012\mkspecs\win32-msvc2012;F:\Dev\Qt\5.2.1\msvc2012\include\QtMultimedia;F:\Dev\Qt\5.2.1\msvc2012\include\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -187,7 +187,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </PreBuildEvent>
     <Link>
       <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;F:\Dev\Qt\5.2.1\msvc2012\lib\Qt5Widgets.lib;F:\Dev\Qt\5.2.1\msvc2012\lib\Qt5Gui.lib;F:\Dev\Qt\5.2.1\msvc2012\lib\Qt5Core.lib</AdditionalDependencies>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;F:\Dev\Qt\5.2.1\msvc2012\lib\Qt5Widgets.lib;F:\Dev\Qt\5.2.1\msvc2012\lib\Qt5Multimedia.lib;F:\Dev\Qt\5.2.1\msvc2012\lib\Qt5Gui.lib;F:\Dev\Qt\5.2.1\msvc2012\lib\Qt5Network.lib;F:\Dev\Qt\5.2.1\msvc2012\lib\Qt5Core.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <ImportLibrary>F:/Dev/Projects/kazu/src/Release/kazu.lib</ImportLibrary>
@@ -201,7 +201,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>F:\Dev\Projects\kazu\src;F:\Dev\Qt\5.2.1\msvc2012\include;F:\Dev\Qt\5.2.1\msvc2012\include\QtWidgets;F:\Dev\Qt\5.2.1\msvc2012\include\QtGui;F:\Dev\Qt\5.2.1\msvc2012\include\QtANGLE;F:\Dev\Qt\5.2.1\msvc2012\include\QtCore;F:\Dev\Qt\5.2.1\msvc2012\mkspecs\win32-msvc2012;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>F:\Dev\Projects\kazu\src;F:\Dev\Qt\5.2.1\msvc2012\include;F:\Dev\Qt\5.2.1\msvc2012\include\QtWidgets;F:\Dev\Qt\5.2.1\msvc2012\include\QtGui;F:\Dev\Qt\5.2.1\msvc2012\include\QtANGLE;F:\Dev\Qt\5.2.1\msvc2012\include\QtCore;F:\Dev\Qt\5.2.1\msvc2012\mkspecs\win32-msvc2012;F:\Dev\Qt\5.2.1\msvc2012\include\QtMultimedia;F:\Dev\Qt\5.2.1\msvc2012\include\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -212,15 +212,15 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat></DebugInformationFormat>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;QT_MULTIMEDIA_LIB;QT_NETWORK_LIB;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>F:\Dev\Projects\kazu\src;F:\Dev\Qt\5.2.1\msvc2012\include;F:\Dev\Qt\5.2.1\msvc2012\include\QtWidgets;F:\Dev\Qt\5.2.1\msvc2012\include\QtGui;F:\Dev\Qt\5.2.1\msvc2012\include\QtANGLE;F:\Dev\Qt\5.2.1\msvc2012\include\QtCore;F:\Dev\Qt\5.2.1\msvc2012\mkspecs\win32-msvc2012;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;QT_MULTIMEDIA_LIB;QT_NETWORK_LIB;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:\Dev\Projects\kazu\src;F:\Dev\Qt\5.2.1\msvc2012\include;F:\Dev\Qt\5.2.1\msvc2012\include\QtWidgets;F:\Dev\Qt\5.2.1\msvc2012\include\QtGui;F:\Dev\Qt\5.2.1\msvc2012\include\QtANGLE;F:\Dev\Qt\5.2.1\msvc2012\include\QtCore;F:\Dev\Qt\5.2.1\msvc2012\mkspecs\win32-msvc2012;F:\Dev\Qt\5.2.1\msvc2012\include\QtMultimedia;F:\Dev\Qt\5.2.1\msvc2012\include\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>F:\Dev\Projects\kazu\src;F:\Dev\Qt\5.2.1\msvc2012\include;F:\Dev\Qt\5.2.1\msvc2012\include\QtWidgets;F:\Dev\Qt\5.2.1\msvc2012\include\QtGui;F:\Dev\Qt\5.2.1\msvc2012\include\QtANGLE;F:\Dev\Qt\5.2.1\msvc2012\include\QtCore;F:\Dev\Qt\5.2.1\msvc2012\mkspecs\win32-msvc2012;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>F:\Dev\Projects\kazu\src;F:\Dev\Qt\5.2.1\msvc2012\include;F:\Dev\Qt\5.2.1\msvc2012\include\QtWidgets;F:\Dev\Qt\5.2.1\msvc2012\include\QtGui;F:\Dev\Qt\5.2.1\msvc2012\include\QtANGLE;F:\Dev\Qt\5.2.1\msvc2012\include\QtCore;F:\Dev\Qt\5.2.1\msvc2012\mkspecs\win32-msvc2012;F:\Dev\Qt\5.2.1\msvc2012\include\QtMultimedia;F:\Dev\Qt\5.2.1\msvc2012\include\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -245,7 +245,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </PreBuildEvent>
     <Link>
       <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;F:\Dev\Qt\5.2.1\msvc2012\lib\Qt5Widgets.lib;F:\Dev\Qt\5.2.1\msvc2012\lib\Qt5Gui.lib;F:\Dev\Qt\5.2.1\msvc2012\lib\Qt5Core.lib</AdditionalDependencies>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;F:\Dev\Qt\5.2.1\msvc2012\lib\Qt5Widgets.lib;F:\Dev\Qt\5.2.1\msvc2012\lib\Qt5Multimedia.lib;F:\Dev\Qt\5.2.1\msvc2012\lib\Qt5Gui.lib;F:\Dev\Qt\5.2.1\msvc2012\lib\Qt5Network.lib;F:\Dev\Qt\5.2.1\msvc2012\lib\Qt5Core.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <ImportLibrary>F:/Dev/Projects/kazu/src/MinSizeRel/kazu.lib</ImportLibrary>
@@ -259,7 +259,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>F:\Dev\Projects\kazu\src;F:\Dev\Qt\5.2.1\msvc2012\include;F:\Dev\Qt\5.2.1\msvc2012\include\QtWidgets;F:\Dev\Qt\5.2.1\msvc2012\include\QtGui;F:\Dev\Qt\5.2.1\msvc2012\include\QtANGLE;F:\Dev\Qt\5.2.1\msvc2012\include\QtCore;F:\Dev\Qt\5.2.1\msvc2012\mkspecs\win32-msvc2012;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>F:\Dev\Projects\kazu\src;F:\Dev\Qt\5.2.1\msvc2012\include;F:\Dev\Qt\5.2.1\msvc2012\include\QtWidgets;F:\Dev\Qt\5.2.1\msvc2012\include\QtGui;F:\Dev\Qt\5.2.1\msvc2012\include\QtANGLE;F:\Dev\Qt\5.2.1\msvc2012\include\QtCore;F:\Dev\Qt\5.2.1\msvc2012\mkspecs\win32-msvc2012;F:\Dev\Qt\5.2.1\msvc2012\include\QtMultimedia;F:\Dev\Qt\5.2.1\msvc2012\include\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -270,15 +270,15 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;QT_MULTIMEDIA_LIB;QT_NETWORK_LIB;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>F:\Dev\Projects\kazu\src;F:\Dev\Qt\5.2.1\msvc2012\include;F:\Dev\Qt\5.2.1\msvc2012\include\QtWidgets;F:\Dev\Qt\5.2.1\msvc2012\include\QtGui;F:\Dev\Qt\5.2.1\msvc2012\include\QtANGLE;F:\Dev\Qt\5.2.1\msvc2012\include\QtCore;F:\Dev\Qt\5.2.1\msvc2012\mkspecs\win32-msvc2012;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;QT_MULTIMEDIA_LIB;QT_NETWORK_LIB;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:\Dev\Projects\kazu\src;F:\Dev\Qt\5.2.1\msvc2012\include;F:\Dev\Qt\5.2.1\msvc2012\include\QtWidgets;F:\Dev\Qt\5.2.1\msvc2012\include\QtGui;F:\Dev\Qt\5.2.1\msvc2012\include\QtANGLE;F:\Dev\Qt\5.2.1\msvc2012\include\QtCore;F:\Dev\Qt\5.2.1\msvc2012\mkspecs\win32-msvc2012;F:\Dev\Qt\5.2.1\msvc2012\include\QtMultimedia;F:\Dev\Qt\5.2.1\msvc2012\include\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>F:\Dev\Projects\kazu\src;F:\Dev\Qt\5.2.1\msvc2012\include;F:\Dev\Qt\5.2.1\msvc2012\include\QtWidgets;F:\Dev\Qt\5.2.1\msvc2012\include\QtGui;F:\Dev\Qt\5.2.1\msvc2012\include\QtANGLE;F:\Dev\Qt\5.2.1\msvc2012\include\QtCore;F:\Dev\Qt\5.2.1\msvc2012\mkspecs\win32-msvc2012;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>F:\Dev\Projects\kazu\src;F:\Dev\Qt\5.2.1\msvc2012\include;F:\Dev\Qt\5.2.1\msvc2012\include\QtWidgets;F:\Dev\Qt\5.2.1\msvc2012\include\QtGui;F:\Dev\Qt\5.2.1\msvc2012\include\QtANGLE;F:\Dev\Qt\5.2.1\msvc2012\include\QtCore;F:\Dev\Qt\5.2.1\msvc2012\mkspecs\win32-msvc2012;F:\Dev\Qt\5.2.1\msvc2012\include\QtMultimedia;F:\Dev\Qt\5.2.1\msvc2012\include\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -303,7 +303,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </PreBuildEvent>
     <Link>
       <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;F:\Dev\Qt\5.2.1\msvc2012\lib\Qt5Widgets.lib;F:\Dev\Qt\5.2.1\msvc2012\lib\Qt5Gui.lib;F:\Dev\Qt\5.2.1\msvc2012\lib\Qt5Core.lib</AdditionalDependencies>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;F:\Dev\Qt\5.2.1\msvc2012\lib\Qt5Widgets.lib;F:\Dev\Qt\5.2.1\msvc2012\lib\Qt5Multimedia.lib;F:\Dev\Qt\5.2.1\msvc2012\lib\Qt5Gui.lib;F:\Dev\Qt\5.2.1\msvc2012\lib\Qt5Network.lib;F:\Dev\Qt\5.2.1\msvc2012\lib\Qt5Core.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ImportLibrary>F:/Dev/Projects/kazu/src/RelWithDebInfo/kazu.lib</ImportLibrary>
