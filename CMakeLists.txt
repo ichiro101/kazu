@@ -11,8 +11,5 @@ set(CMAKE_AUTOMOC ON)
 # Find the QtWidgets library
 find_package(Qt5Widgets)
 
-# Tell CMake to create the kazu executable
-add_executable(kazu WIN32 kazu.cpp)
-
-# Use the Widgets module from Qt 5.
-target_link_libraries(kazu Qt5::Widgets)
+# source directory
+subdirs(src)

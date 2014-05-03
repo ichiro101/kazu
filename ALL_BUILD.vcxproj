@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGUID>{270EFEF5-A065-400B-BBD5-022857978D9A}</ProjectGUID>
+    <ProjectGUID>{4DBAE816-F12D-4D52-819F-6D81E761E924}</ProjectGUID>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
     <ProjectName>ALL_BUILD</ProjectName>
@@ -211,10 +211,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="F:/Dev/Projects/kazu/ZERO_CHECK.vcxproj">
-      <Project>F2984961-53A8-4150-AB48-898DC1727F93</Project>
+      <Project>7B43F70E-F969-4AB4-B627-78966D0C4592</Project>
     </ProjectReference>
-    <ProjectReference Include="F:/Dev/Projects/kazu/kazu.vcxproj">
-      <Project>11A3D474-3D92-422C-B9B8-93BD5F72298C</Project>
+    <ProjectReference Include="F:/Dev/Projects/kazu/src/kazu.vcxproj">
+      <Project>18B02293-FF30-475F-9EC1-41DA2A31D03E</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

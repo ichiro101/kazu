@@ -9,11 +9,19 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="kazu.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
     <CustomBuild Include="CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{A4FD7C5E-3356-4CA8-82A4-0FFA552B23F9}</UniqueIdentifier>
+      <UniqueIdentifier>{34CC5E41-F775-4E58-BCB9-F020D8D75A11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{71886E8E-3E0C-4628-AF4E-B4854A2AE8CF}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
