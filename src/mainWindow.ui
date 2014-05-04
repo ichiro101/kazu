@@ -86,11 +86,6 @@
     <string>Manage Library</string>
    </property>
   </action>
-  <action name="actionSong_Lists">
-   <property name="text">
-    <string>Song Lists</string>
-   </property>
-  </action>
   <action name="actionAbout">
    <property name="text">
     <string>About</string>

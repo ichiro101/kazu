@@ -31,7 +31,6 @@ public:
     QAction *actionExit;
     QAction *actionOpen;
     QAction *actionManage_Library;
-    QAction *actionSong_Lists;
     QAction *actionAbout;
     QAction *actionSearch_Library;
     QAction *actionSearch_Current_Playlist;
@@ -58,8 +57,6 @@ public:
         actionOpen->setObjectName(QStringLiteral("actionOpen"));
         actionManage_Library = new QAction(kazuWindow);
         actionManage_Library->setObjectName(QStringLiteral("actionManage_Library"));
-        actionSong_Lists = new QAction(kazuWindow);
-        actionSong_Lists->setObjectName(QStringLiteral("actionSong_Lists"));
         actionAbout = new QAction(kazuWindow);
         actionAbout->setObjectName(QStringLiteral("actionAbout"));
         actionSearch_Library = new QAction(kazuWindow);
@@ -126,7 +123,6 @@ public:
         actionExit->setText(QApplication::translate("kazuWindow", "Exit", 0));
         actionOpen->setText(QApplication::translate("kazuWindow", "Open", 0));
         actionManage_Library->setText(QApplication::translate("kazuWindow", "Manage Library", 0));
-        actionSong_Lists->setText(QApplication::translate("kazuWindow", "Song Lists", 0));
         actionAbout->setText(QApplication::translate("kazuWindow", "About", 0));
         actionSearch_Library->setText(QApplication::translate("kazuWindow", "Search Library", 0));
         actionSearch_Current_Playlist->setText(QApplication::translate("kazuWindow", "Search Current Playlist", 0));

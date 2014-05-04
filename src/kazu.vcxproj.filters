@@ -15,14 +15,14 @@
     <ClInclude Include="ui_mainWindow.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ui_sources.h">
+    <ClInclude Include="ui_libraryWindow.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="CMakeLists.txt" />
     <CustomBuild Include="mainWindow.ui" />
-    <CustomBuild Include="sources.ui" />
+    <CustomBuild Include="libraryWindow.ui" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">

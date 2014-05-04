@@ -428,10 +428,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="sources.ui">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_sources.h</Message>
+    <CustomBuild Include="libraryWindow.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_libraryWindow.h</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-F:\Dev\Qt\5.2.1\msvc2012\bin\uic.exe -o F:/Dev/Projects/kazu/src/ui_sources.h F:/Dev/Projects/kazu/src/sources.ui
+F:\Dev\Qt\5.2.1\msvc2012\bin\uic.exe -o F:/Dev/Projects/kazu/src/ui_libraryWindow.h F:/Dev/Projects/kazu/src/libraryWindow.ui
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -439,12 +439,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">F:/Dev/Projects/kazu/src/sources.ui;F:\Dev\Projects\kazu\src\sources.ui;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">F:\Dev\Projects\kazu\src\ui_sources.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">F:/Dev/Projects/kazu/src/libraryWindow.ui;F:\Dev\Projects\kazu\src\libraryWindow.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">F:\Dev\Projects\kazu\src\ui_libraryWindow.h</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_sources.h</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_libraryWindow.h</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-F:\Dev\Qt\5.2.1\msvc2012\bin\uic.exe -o F:/Dev/Projects/kazu/src/ui_sources.h F:/Dev/Projects/kazu/src/sources.ui
+F:\Dev\Qt\5.2.1\msvc2012\bin\uic.exe -o F:/Dev/Projects/kazu/src/ui_libraryWindow.h F:/Dev/Projects/kazu/src/libraryWindow.ui
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -452,12 +452,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">F:/Dev/Projects/kazu/src/sources.ui;F:\Dev\Projects\kazu\src\sources.ui;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">F:\Dev\Projects\kazu\src\ui_sources.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">F:/Dev/Projects/kazu/src/libraryWindow.ui;F:\Dev\Projects\kazu\src\libraryWindow.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">F:\Dev\Projects\kazu\src\ui_libraryWindow.h</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_sources.h</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_libraryWindow.h</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
-F:\Dev\Qt\5.2.1\msvc2012\bin\uic.exe -o F:/Dev/Projects/kazu/src/ui_sources.h F:/Dev/Projects/kazu/src/sources.ui
+F:\Dev\Qt\5.2.1\msvc2012\bin\uic.exe -o F:/Dev/Projects/kazu/src/ui_libraryWindow.h F:/Dev/Projects/kazu/src/libraryWindow.ui
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -465,12 +465,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">F:/Dev/Projects/kazu/src/sources.ui;F:\Dev\Projects\kazu\src\sources.ui;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">F:\Dev\Projects\kazu\src\ui_sources.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">F:/Dev/Projects/kazu/src/libraryWindow.ui;F:\Dev\Projects\kazu\src\libraryWindow.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">F:\Dev\Projects\kazu\src\ui_libraryWindow.h</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_sources.h</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_libraryWindow.h</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
-F:\Dev\Qt\5.2.1\msvc2012\bin\uic.exe -o F:/Dev/Projects/kazu/src/ui_sources.h F:/Dev/Projects/kazu/src/sources.ui
+F:\Dev\Qt\5.2.1\msvc2012\bin\uic.exe -o F:/Dev/Projects/kazu/src/ui_libraryWindow.h F:/Dev/Projects/kazu/src/libraryWindow.ui
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -478,15 +478,15 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">F:/Dev/Projects/kazu/src/sources.ui;F:\Dev\Projects\kazu\src\sources.ui;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">F:\Dev\Projects\kazu\src\ui_sources.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">F:/Dev/Projects/kazu/src/libraryWindow.ui;F:\Dev\Projects\kazu\src\libraryWindow.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">F:\Dev\Projects\kazu\src\ui_libraryWindow.h</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kazu.h" />
     <ClInclude Include="ui_mainWindow.h" />
-    <ClInclude Include="ui_sources.h" />
+    <ClInclude Include="ui_libraryWindow.h" />
     <ClCompile Include="kazu.cpp"  />
     <ClCompile Include="kazu_automoc.cpp"  />
   </ItemGroup>
