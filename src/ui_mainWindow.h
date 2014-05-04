@@ -30,7 +30,6 @@ class Ui_kazuWindow
 public:
     QAction *actionExit;
     QAction *actionOpen;
-    QAction *actionOpen_2;
     QAction *actionManage_Library;
     QAction *actionSong_Lists;
     QAction *actionAbout;
@@ -55,8 +54,6 @@ public:
         actionExit->setObjectName(QStringLiteral("actionExit"));
         actionOpen = new QAction(kazuWindow);
         actionOpen->setObjectName(QStringLiteral("actionOpen"));
-        actionOpen_2 = new QAction(kazuWindow);
-        actionOpen_2->setObjectName(QStringLiteral("actionOpen_2"));
         actionManage_Library = new QAction(kazuWindow);
         actionManage_Library->setObjectName(QStringLiteral("actionManage_Library"));
         actionSong_Lists = new QAction(kazuWindow);
@@ -120,7 +117,6 @@ public:
         kazuWindow->setWindowTitle(QApplication::translate("kazuWindow", "kazu", 0));
         actionExit->setText(QApplication::translate("kazuWindow", "Exit", 0));
         actionOpen->setText(QApplication::translate("kazuWindow", "Open", 0));
-        actionOpen_2->setText(QApplication::translate("kazuWindow", "Open", 0));
         actionManage_Library->setText(QApplication::translate("kazuWindow", "Manage Library", 0));
         actionSong_Lists->setText(QApplication::translate("kazuWindow", "Song Lists", 0));
         actionAbout->setText(QApplication::translate("kazuWindow", "About", 0));

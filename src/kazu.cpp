@@ -1,5 +1,4 @@
-#include "ui_mainWindow.h"
-#include <QApplication>
+#include "kazu.h"
 
 int main(int argc, char **argv) {
 	QApplication app(argc, argv);

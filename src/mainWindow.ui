@@ -79,11 +79,6 @@
     <string>Open</string>
    </property>
   </action>
-  <action name="actionOpen_2">
-   <property name="text">
-    <string>Open</string>
-   </property>
-  </action>
   <action name="actionManage_Library">
    <property name="text">
     <string>Manage Library</string>
