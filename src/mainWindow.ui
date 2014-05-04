@@ -61,8 +61,10 @@
     <property name="title">
      <string>Library</string>
     </property>
-    <addaction name="actionSong_Lists"/>
     <addaction name="actionManage_Library"/>
+    <addaction name="separator"/>
+    <addaction name="actionSearch_Library"/>
+    <addaction name="actionSearch_Current_Playlist"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuLibrary"/>
@@ -92,6 +94,16 @@
   <action name="actionAbout">
    <property name="text">
     <string>About</string>
+   </property>
+  </action>
+  <action name="actionSearch_Library">
+   <property name="text">
+    <string>Search Library</string>
+   </property>
+  </action>
+  <action name="actionSearch_Current_Playlist">
+   <property name="text">
+    <string>Search Current Playlist</string>
    </property>
   </action>
  </widget>

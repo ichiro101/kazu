@@ -33,6 +33,8 @@ public:
     QAction *actionManage_Library;
     QAction *actionSong_Lists;
     QAction *actionAbout;
+    QAction *actionSearch_Library;
+    QAction *actionSearch_Current_Playlist;
     QWidget *centralwidget;
     QVBoxLayout *verticalLayout;
     QTabWidget *tabWidget;
@@ -60,6 +62,10 @@ public:
         actionSong_Lists->setObjectName(QStringLiteral("actionSong_Lists"));
         actionAbout = new QAction(kazuWindow);
         actionAbout->setObjectName(QStringLiteral("actionAbout"));
+        actionSearch_Library = new QAction(kazuWindow);
+        actionSearch_Library->setObjectName(QStringLiteral("actionSearch_Library"));
+        actionSearch_Current_Playlist = new QAction(kazuWindow);
+        actionSearch_Current_Playlist->setObjectName(QStringLiteral("actionSearch_Current_Playlist"));
         centralwidget = new QWidget(kazuWindow);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         verticalLayout = new QVBoxLayout(centralwidget);
@@ -101,8 +107,10 @@ public:
         menuFile->addSeparator();
         menuFile->addAction(actionExit);
         menuHelp->addAction(actionAbout);
-        menuLibrary->addAction(actionSong_Lists);
         menuLibrary->addAction(actionManage_Library);
+        menuLibrary->addSeparator();
+        menuLibrary->addAction(actionSearch_Library);
+        menuLibrary->addAction(actionSearch_Current_Playlist);
 
         retranslateUi(kazuWindow);
 
@@ -120,6 +128,8 @@ public:
         actionManage_Library->setText(QApplication::translate("kazuWindow", "Manage Library", 0));
         actionSong_Lists->setText(QApplication::translate("kazuWindow", "Song Lists", 0));
         actionAbout->setText(QApplication::translate("kazuWindow", "About", 0));
+        actionSearch_Library->setText(QApplication::translate("kazuWindow", "Search Library", 0));
+        actionSearch_Current_Playlist->setText(QApplication::translate("kazuWindow", "Search Current Playlist", 0));
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("kazuWindow", "Playlist", 0));
         menuFile->setTitle(QApplication::translate("kazuWindow", "File", 0));
         menuHelp->setTitle(QApplication::translate("kazuWindow", "Help", 0));
