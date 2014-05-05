@@ -541,10 +541,12 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kazu.h" />
+    <ClInclude Include="MainWindow.h" />
     <ClInclude Include="ui_mainWindow.h" />
     <ClInclude Include="ui_libraryWindow.h" />
     <ClInclude Include="ui_browseLibraryWindow.h" />
     <ClCompile Include="kazu.cpp"  />
+    <ClCompile Include="MainWindow.cpp"  />
     <ClCompile Include="kazu_automoc.cpp"  />
   </ItemGroup>
   <ItemGroup>
