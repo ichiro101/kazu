@@ -7,6 +7,9 @@
     <ClCompile Include="MainWindow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="kazu_automoc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -16,6 +19,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MainWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ui_mainWindow.h">

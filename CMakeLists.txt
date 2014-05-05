@@ -10,7 +10,6 @@ set(CMAKE_AUTOMOC ON)
 
 # Find the Qt libraries we need
 find_package(Qt5Widgets)
-find_package(Qt5Multimedia)
 
 # source directory
 subdirs(src)

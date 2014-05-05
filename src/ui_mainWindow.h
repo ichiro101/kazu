@@ -55,7 +55,6 @@ public:
     QHBoxLayout *horizontalLayout;
     QPushButton *playButton;
     QPushButton *pauseButton;
-    QPushButton *stopButton;
     QPushButton *prevButton;
     QPushButton *nextButton;
     QSpacerItem *horizontalSpacer;
@@ -138,11 +137,6 @@ public:
         pauseButton->setObjectName(QStringLiteral("pauseButton"));
 
         horizontalLayout->addWidget(pauseButton);
-
-        stopButton = new QPushButton(centralwidget);
-        stopButton->setObjectName(QStringLiteral("stopButton"));
-
-        horizontalLayout->addWidget(stopButton);
 
         prevButton = new QPushButton(centralwidget);
         prevButton->setObjectName(QStringLiteral("prevButton"));
@@ -229,7 +223,6 @@ public:
         QObject::connect(pauseButton, SIGNAL(clicked()), actionPause, SLOT(trigger()));
         QObject::connect(prevButton, SIGNAL(clicked()), actionPrev, SLOT(trigger()));
         QObject::connect(nextButton, SIGNAL(clicked()), actionNext, SLOT(trigger()));
-        QObject::connect(stopButton, SIGNAL(clicked()), actionStop, SLOT(trigger()));
 
         tabWidget->setCurrentIndex(0);
 
@@ -258,7 +251,6 @@ public:
         label_2->setText(QApplication::translate("MainWindow", "--:--", 0));
         playButton->setText(QApplication::translate("MainWindow", "Play", 0));
         pauseButton->setText(QApplication::translate("MainWindow", "Pause", 0));
-        stopButton->setText(QApplication::translate("MainWindow", "Stop", 0));
         prevButton->setText(QApplication::translate("MainWindow", "Prev", 0));
         nextButton->setText(QApplication::translate("MainWindow", "Next", 0));
         label_3->setText(QApplication::translate("MainWindow", "Volume", 0));

@@ -63,13 +63,6 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="stopButton">
-        <property name="text">
-         <string>Stop</string>
-        </property>
-       </widget>
-      </item>
-      <item>
        <widget class="QPushButton" name="prevButton">
         <property name="text">
          <string>Prev</string>
@@ -303,22 +296,6 @@
    <hints>
     <hint type="sourcelabel">
      <x>371</x>
-     <y>73</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>stopButton</sender>
-   <signal>clicked()</signal>
-   <receiver>actionStop</receiver>
-   <slot>trigger()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>209</x>
      <y>73</y>
     </hint>
     <hint type="destinationlabel">
