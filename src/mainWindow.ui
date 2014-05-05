@@ -164,7 +164,19 @@
     <addaction name="separator"/>
     <addaction name="actionManage_Library"/>
    </widget>
+   <widget class="QMenu" name="menuPlay">
+    <property name="title">
+     <string>Play</string>
+    </property>
+    <addaction name="actionPlay"/>
+    <addaction name="actionPause"/>
+    <addaction name="actionStop"/>
+    <addaction name="separator"/>
+    <addaction name="actionPrev"/>
+    <addaction name="actionNext"/>
+   </widget>
    <addaction name="menuFile"/>
+   <addaction name="menuPlay"/>
    <addaction name="menuLibrary"/>
    <addaction name="menuHelp"/>
   </widget>
@@ -205,6 +217,41 @@
   <action name="actionBrowse_Library">
    <property name="text">
     <string>Browse Library</string>
+   </property>
+  </action>
+  <action name="actionPlay">
+   <property name="text">
+    <string>Play</string>
+   </property>
+  </action>
+  <action name="actionPause">
+   <property name="text">
+    <string>Pause</string>
+   </property>
+  </action>
+  <action name="actionStop">
+   <property name="text">
+    <string>Stop</string>
+   </property>
+  </action>
+  <action name="actionPrevious_Song">
+   <property name="text">
+    <string>Previous Song</string>
+   </property>
+  </action>
+  <action name="actionNext_Song">
+   <property name="text">
+    <string>Next</string>
+   </property>
+  </action>
+  <action name="actionPrev">
+   <property name="text">
+    <string>Prev</string>
+   </property>
+  </action>
+  <action name="actionNext">
+   <property name="text">
+    <string>Next</string>
    </property>
   </action>
  </widget>
