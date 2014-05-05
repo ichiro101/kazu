@@ -41,6 +41,11 @@ public:
     QAction *actionSearch_Library;
     QAction *actionSearch_Current_Playlist;
     QAction *actionBrowse_Library;
+    QAction *actionPlay;
+    QAction *actionPause;
+    QAction *actionStop;
+    QAction *actionPrev;
+    QAction *actionNext;
     QWidget *centralwidget;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout_2;
@@ -64,6 +69,7 @@ public:
     QMenu *menuFile;
     QMenu *menuHelp;
     QMenu *menuLibrary;
+    QMenu *menuPlay;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -85,6 +91,16 @@ public:
         actionSearch_Current_Playlist->setObjectName(QStringLiteral("actionSearch_Current_Playlist"));
         actionBrowse_Library = new QAction(MainWindow);
         actionBrowse_Library->setObjectName(QStringLiteral("actionBrowse_Library"));
+        actionPlay = new QAction(MainWindow);
+        actionPlay->setObjectName(QStringLiteral("actionPlay"));
+        actionPause = new QAction(MainWindow);
+        actionPause->setObjectName(QStringLiteral("actionPause"));
+        actionStop = new QAction(MainWindow);
+        actionStop->setObjectName(QStringLiteral("actionStop"));
+        actionPrev = new QAction(MainWindow);
+        actionPrev->setObjectName(QStringLiteral("actionPrev"));
+        actionNext = new QAction(MainWindow);
+        actionNext->setObjectName(QStringLiteral("actionNext"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         verticalLayout = new QVBoxLayout(centralwidget);
@@ -181,12 +197,15 @@ public:
         menuHelp->setObjectName(QStringLiteral("menuHelp"));
         menuLibrary = new QMenu(menubar);
         menuLibrary->setObjectName(QStringLiteral("menuLibrary"));
+        menuPlay = new QMenu(menubar);
+        menuPlay->setObjectName(QStringLiteral("menuPlay"));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QStringLiteral("statusbar"));
         MainWindow->setStatusBar(statusbar);
 
         menubar->addAction(menuFile->menuAction());
+        menubar->addAction(menuPlay->menuAction());
         menubar->addAction(menuLibrary->menuAction());
         menubar->addAction(menuHelp->menuAction());
         menuFile->addAction(actionOpen);
@@ -198,8 +217,19 @@ public:
         menuLibrary->addAction(actionSearch_Current_Playlist);
         menuLibrary->addSeparator();
         menuLibrary->addAction(actionManage_Library);
+        menuPlay->addAction(actionPlay);
+        menuPlay->addAction(actionPause);
+        menuPlay->addAction(actionStop);
+        menuPlay->addSeparator();
+        menuPlay->addAction(actionPrev);
+        menuPlay->addAction(actionNext);
 
         retranslateUi(MainWindow);
+        QObject::connect(playButton, SIGNAL(clicked()), actionPlay, SLOT(trigger()));
+        QObject::connect(pauseButton, SIGNAL(clicked()), actionPause, SLOT(trigger()));
+        QObject::connect(prevButton, SIGNAL(clicked()), actionPrev, SLOT(trigger()));
+        QObject::connect(nextButton, SIGNAL(clicked()), actionNext, SLOT(trigger()));
+        QObject::connect(stopButton, SIGNAL(clicked()), actionStop, SLOT(trigger()));
 
         tabWidget->setCurrentIndex(0);
 
@@ -218,6 +248,11 @@ public:
         actionSearch_Library->setText(QApplication::translate("MainWindow", "Search Library", 0));
         actionSearch_Current_Playlist->setText(QApplication::translate("MainWindow", "Search Current Playlist", 0));
         actionBrowse_Library->setText(QApplication::translate("MainWindow", "Browse Library", 0));
+        actionPlay->setText(QApplication::translate("MainWindow", "Play", 0));
+        actionPause->setText(QApplication::translate("MainWindow", "Pause", 0));
+        actionStop->setText(QApplication::translate("MainWindow", "Stop", 0));
+        actionPrev->setText(QApplication::translate("MainWindow", "Prev", 0));
+        actionNext->setText(QApplication::translate("MainWindow", "Next", 0));
         label->setText(QApplication::translate("MainWindow", "--:--", 0));
         progressBar->setFormat(QString());
         label_2->setText(QApplication::translate("MainWindow", "--:--", 0));
@@ -231,6 +266,7 @@ public:
         menuFile->setTitle(QApplication::translate("MainWindow", "File", 0));
         menuHelp->setTitle(QApplication::translate("MainWindow", "Help", 0));
         menuLibrary->setTitle(QApplication::translate("MainWindow", "Library", 0));
+        menuPlay->setTitle(QApplication::translate("MainWindow", "Play", 0));
     } // retranslateUi
 
 };
