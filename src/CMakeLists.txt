@@ -1,5 +1,5 @@
 # generate the actual executable
-QT5_WRAP_UI(UIS_HDRS mainWindow.ui libraryWindow.ui)
+QT5_WRAP_UI(UIS_HDRS mainWindow.ui libraryWindow.ui browseLibraryWindow.ui)
 SET(kazu_SOURCES kazu.cpp)
 SET(kazu_HEADERS kazu.h)
 

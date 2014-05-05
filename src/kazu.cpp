@@ -3,7 +3,7 @@
 int main(int argc, char **argv) {
 	QApplication app(argc, argv);
 	QMainWindow mainWindow;
-	Ui_kazuWindow kazuWindow;
+	Ui_MainWindow kazuWindow;
 
 	kazuWindow.setupUi(&mainWindow);
 

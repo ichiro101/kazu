@@ -16,65 +16,86 @@
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QTableWidget>
 #include <QtWidgets/QVBoxLayout>
 
 QT_BEGIN_NAMESPACE
 
-class Ui_Dialog
+class Ui_LibraryWindow
 {
 public:
     QVBoxLayout *verticalLayout_2;
+    QLabel *label;
     QTableWidget *tableWidget;
     QHBoxLayout *horizontalLayout_2;
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
+    QPushButton *addSourceButton;
+    QSpacerItem *horizontalSpacer;
+    QPushButton *okButton;
+    QPushButton *cancelButton;
 
-    void setupUi(QDialog *Dialog)
+    void setupUi(QDialog *LibraryWindow)
     {
-        if (Dialog->objectName().isEmpty())
-            Dialog->setObjectName(QStringLiteral("Dialog"));
-        Dialog->resize(392, 512);
-        verticalLayout_2 = new QVBoxLayout(Dialog);
+        if (LibraryWindow->objectName().isEmpty())
+            LibraryWindow->setObjectName(QStringLiteral("LibraryWindow"));
+        LibraryWindow->resize(392, 512);
+        verticalLayout_2 = new QVBoxLayout(LibraryWindow);
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
-        tableWidget = new QTableWidget(Dialog);
+        label = new QLabel(LibraryWindow);
+        label->setObjectName(QStringLiteral("label"));
+
+        verticalLayout_2->addWidget(label);
+
+        tableWidget = new QTableWidget(LibraryWindow);
         tableWidget->setObjectName(QStringLiteral("tableWidget"));
 
         verticalLayout_2->addWidget(tableWidget);
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
-        pushButton = new QPushButton(Dialog);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
+        addSourceButton = new QPushButton(LibraryWindow);
+        addSourceButton->setObjectName(QStringLiteral("addSourceButton"));
 
-        horizontalLayout_2->addWidget(pushButton);
+        horizontalLayout_2->addWidget(addSourceButton);
 
-        pushButton_2 = new QPushButton(Dialog);
-        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout_2->addWidget(pushButton_2);
+        horizontalLayout_2->addItem(horizontalSpacer);
+
+        okButton = new QPushButton(LibraryWindow);
+        okButton->setObjectName(QStringLiteral("okButton"));
+
+        horizontalLayout_2->addWidget(okButton);
+
+        cancelButton = new QPushButton(LibraryWindow);
+        cancelButton->setObjectName(QStringLiteral("cancelButton"));
+
+        horizontalLayout_2->addWidget(cancelButton);
 
 
         verticalLayout_2->addLayout(horizontalLayout_2);
 
 
-        retranslateUi(Dialog);
+        retranslateUi(LibraryWindow);
 
-        QMetaObject::connectSlotsByName(Dialog);
+        QMetaObject::connectSlotsByName(LibraryWindow);
     } // setupUi
 
-    void retranslateUi(QDialog *Dialog)
+    void retranslateUi(QDialog *LibraryWindow)
     {
-        Dialog->setWindowTitle(QApplication::translate("Dialog", "Dialog", 0));
-        pushButton->setText(QApplication::translate("Dialog", "PushButton", 0));
-        pushButton_2->setText(QApplication::translate("Dialog", "PushButton", 0));
+        LibraryWindow->setWindowTitle(QApplication::translate("LibraryWindow", "Dialog", 0));
+        label->setText(QApplication::translate("LibraryWindow", "Manage Library", 0));
+        addSourceButton->setText(QApplication::translate("LibraryWindow", "Add Source", 0));
+        okButton->setText(QApplication::translate("LibraryWindow", "Ok", 0));
+        cancelButton->setText(QApplication::translate("LibraryWindow", "Cancel", 0));
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class Dialog: public Ui_Dialog {};
+    class LibraryWindow: public Ui_LibraryWindow {};
 } // namespace Ui
 
 QT_END_NAMESPACE
