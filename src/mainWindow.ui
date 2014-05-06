@@ -106,7 +106,7 @@
      </layout>
     </item>
     <item>
-     <widget class="QTabWidget" name="tabWidget">
+     <widget class="QTabWidget" name="playlistTab">
       <property name="currentIndex">
        <number>0</number>
       </property>

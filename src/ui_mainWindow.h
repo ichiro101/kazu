@@ -60,7 +60,7 @@ public:
     QSpacerItem *horizontalSpacer;
     QLabel *label_3;
     QSlider *volumeControl;
-    QTabWidget *tabWidget;
+    QTabWidget *playlistTab;
     QWidget *tab;
     QVBoxLayout *verticalLayout_2;
     QTableView *tableView;
@@ -166,8 +166,8 @@ public:
 
         verticalLayout->addLayout(horizontalLayout);
 
-        tabWidget = new QTabWidget(centralwidget);
-        tabWidget->setObjectName(QStringLiteral("tabWidget"));
+        playlistTab = new QTabWidget(centralwidget);
+        playlistTab->setObjectName(QStringLiteral("playlistTab"));
         tab = new QWidget();
         tab->setObjectName(QStringLiteral("tab"));
         verticalLayout_2 = new QVBoxLayout(tab);
@@ -177,9 +177,9 @@ public:
 
         verticalLayout_2->addWidget(tableView);
 
-        tabWidget->addTab(tab, QString());
+        playlistTab->addTab(tab, QString());
 
-        verticalLayout->addWidget(tabWidget);
+        verticalLayout->addWidget(playlistTab);
 
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
@@ -224,7 +224,7 @@ public:
         QObject::connect(prevButton, SIGNAL(clicked()), actionPrev, SLOT(trigger()));
         QObject::connect(nextButton, SIGNAL(clicked()), actionNext, SLOT(trigger()));
 
-        tabWidget->setCurrentIndex(0);
+        playlistTab->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -254,7 +254,7 @@ public:
         prevButton->setText(QApplication::translate("MainWindow", "Prev", 0));
         nextButton->setText(QApplication::translate("MainWindow", "Next", 0));
         label_3->setText(QApplication::translate("MainWindow", "Volume", 0));
-        tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("MainWindow", "Playlist", 0));
+        playlistTab->setTabText(playlistTab->indexOf(tab), QApplication::translate("MainWindow", "Playlist", 0));
         menuFile->setTitle(QApplication::translate("MainWindow", "File", 0));
         menuHelp->setTitle(QApplication::translate("MainWindow", "Help", 0));
         menuLibrary->setTitle(QApplication::translate("MainWindow", "Library", 0));
