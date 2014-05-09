@@ -16,8 +16,5 @@ set(CMAKE_AUTOMOC ON)
 find_package(Qt5Widgets)
 find_package(FFMPEG)
 
-message(STATUS "FFMPEG_FOUND ${FFMPEG_FOUND}")
-message(STATUS "FFMPEG_INCLUDE_DIR ${FFMPEG_INCLUDE_DIR}")
-
 # source directory
 subdirs(src)
